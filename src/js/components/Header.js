@@ -7,7 +7,6 @@ export default class Header extends React.Component {
     return (
       <header>
         <img src="../assets/tv.svg" />
-        <p clasName="date"></p>
         <h2>What's on telly <b>tonight</b>?</h2>
       </header>
     );

@@ -34,7 +34,17 @@
 		line-height: 1.4;
 		font-size: 1.2rem;
 		font-weight: 400;
-		border-top: 3px solid transparent;
+		font-family: $body-font;
+		transition: border 300ms ease-in-out;
+		padding-top: 0;
+		&:before{
+			content: '';
+			width: 0;
+			height: 3px;
+			display: block;
+			background-color: #333;
+			margin-bottom: .5rem;
+		}
 	}
 
 	p{
@@ -57,8 +67,9 @@
 		background-color: $colour-yellow;
 		cursor: pointer;
 
-		h2{
-			border-top-color: #fff;
+		h2:before{
+			width: 100%;
+			transition: width 300ms ease-in-out;
 		}
 
 		p{
@@ -77,8 +88,8 @@
 .show-info,
 .cast{
 	width: 50%;
-	padding: 2rem 4rem;
-	margin: 4rem 0;
+	padding: 0 4rem 2rem 4rem;
+	margin: 0 0 4rem 0;
 
 	.row{
 		border-top: 2px solid #eee;
@@ -88,6 +99,7 @@
 		font-size: 1.8rem;
 		margin-bottom: 2rem;
 		font-weight: 400;
+		font-family: $heading-font;
 	}
 }
 

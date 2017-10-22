@@ -28,19 +28,21 @@ export default class Show extends React.Component {
       <div>
         <div className="grid-container main-info-container">
           <div className="navigator">
-            <a href="/"><i class="fa fa-angle-left"></i> Back</a>
+            <a href="/"><i class="fa fa-angle-left"></i> Back to Shows</a>
           </div>
-          <div className="hero-image">
-            <img src={showInfo.image.original}/>
-          </div>
-          <div className="main-info">
-            {showInfo.rating.average !== null &&
-              <p>Rating: {showInfo.rating.average} /10</p>
-            }
+          <div className="row">
+            <div className="hero-image">
+              <img src={showInfo.image.original}/>
+            </div>
+            <div className="main-info">
+              {showInfo.rating.average !== null &&
+                <p>Rating: {showInfo.rating.average} /10</p>
+              }
 
-            <h2>{showInfo.name}</h2>
-            <p dangerouslySetInnerHTML={{__html: showInfo.summary}} />
-            
+              <h2>{showInfo.name}</h2>
+              <p dangerouslySetInnerHTML={{__html: showInfo.summary}} />
+              
+            </div>
           </div>
         </div>
 

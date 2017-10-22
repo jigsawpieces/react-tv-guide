@@ -6,14 +6,16 @@
 		font-size: 1.8rem;
 		margin-bottom: 2rem;
 		font-weight: 400;
+		font-family: $heading-font;
 	}
 
 	.row{
-		border-top: 2px solid #fff;
+		border-top: 2px solid #ddd;
 
 		&:first-of-type{
 			text-transform: uppercase;
 			color: #aaa;
+			font-family: $heading-font;
 		}
 
 		.season, .number, .release-date{

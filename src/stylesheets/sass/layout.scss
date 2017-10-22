@@ -1,5 +1,5 @@
 header{
-	background-color: #f2f2f2;
+	background-color: #f0f0f0;
 	padding: 2rem 4rem 10rem 4rem;
 	position: relative;
 	img{
@@ -19,6 +19,7 @@ header{
 		font-size: 2rem;
 		margin: 0;
 		display: inline-block;
+		font-family: $heading-font;
 	}
 }
 
@@ -35,7 +36,6 @@ header{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	animation: fadeIn 2s forwards;
 }
 
 .no-wrap{
@@ -45,15 +45,16 @@ header{
 
 // main
 .navigator{
-	width: 100%;
-	margin: 2rem 0;
-	padding-left: 4rem;
-
+	top: 2rem;
+	left: 4rem;
+	position: fixed;
+	z-index:1;
 	a{
 		color: #333;
 		text-decoration: none;
 		background-color: $colour-yellow;
 		padding: 5px 10px;
+		font-family: $heading-font;
 		&:hover{
 			text-decoration: none;
 			background-color: darken($colour-yellow,5%)
@@ -66,12 +67,16 @@ header{
 	position: relative;
 	align-items: flex-start;
 	animation: fadeIn 2s forwards;
+	&>.row{
+		padding: 6rem 4rem 4rem;
+		align-items: center;
+		justify-content: center;
+	}
 }
 
 .hero-image{
 	width: 30%;
-	margin-left: 4rem;
-	text-align: center;
+	text-align: right;
 	img{
 		max-width: 100%;
 	}
@@ -79,16 +84,24 @@ header{
 
 .main-info{
 	padding: 4rem;
-	width: calc(100% - 40% - 8rem);
+	width: 60%;
+	//width: calc(100% - 40% - 8rem);
 	background-color: #f0f0f0;
 	position: relative;
-	right: 4rem;
-	bottom: -2rem;
-
+	left: -1rem;
 	h2{
-		margin-top: 4rem;
+		margin-top: 2rem;
 		font-size: 1.8rem;
 		font-weight: 400;
+		font-family: $heading-font;
+		&:after{
+			content: '';
+			width: 40px;
+			height: 5px;
+			background-color: #333;
+			display: block;
+			margin-top: .5rem;
+		}
 	}
 }
 
