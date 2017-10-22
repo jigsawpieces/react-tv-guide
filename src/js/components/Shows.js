@@ -32,7 +32,7 @@ class Shows extends React.Component {
                 <img src={item.show.image.medium} />
                 <h2>{item.show.name}</h2>
                 {item.show.rating.average > 0 &&
-                  <p>Rating: {item.show.rating.average} / 10</p>
+                  <p><span className="rating">Rating</span><span className="score">{item.show.rating.average} / 10</span></p>
                 }
               </div>
               ) 

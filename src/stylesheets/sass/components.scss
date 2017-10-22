@@ -2,7 +2,8 @@
 // shows list
 
 .shows-list{
-	padding: 4rem;
+	margin-top: -4rem;
+	padding: 0 4rem 4rem 4rem;
 }
 
 .grid{
@@ -12,6 +13,7 @@
 
 	transition: all 300ms ease-in-out;
 	margin-bottom: 2rem;
+	position: relative;
 
 	img{
 		width: 100%;
@@ -36,8 +38,19 @@
 	}
 
 	p{
-		border-top: 3px solid #eee;
+		color: transparent;
 		transition: all 100ms ease-in-out;
+		position: absolute;
+		font-size: 1.2rem;
+		.rating,
+		.score{
+			display: block;
+		}
+
+		.score{
+			font-size: 1.4rem;
+		}
+
 	}
 
 	&:hover{
@@ -50,7 +63,7 @@
 
 		p{
 			border-top-color: transparent;
-			color: transparent;
+			color: #333;
 		}
 
 		img{

@@ -1,7 +1,8 @@
 html, #app{
 	font-family: $body-font;
 	color: #333;
-	transition: all 100ms ease-in-out;
+	transition: all 300ms ease-in-out;
 	font-size: 18px;
 	line-height: 1.6;
+	animation: fadeIn 2s forwards;
 }

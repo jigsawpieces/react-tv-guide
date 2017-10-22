@@ -1,24 +1,24 @@
 header{
 	background-color: #f2f2f2;
-	padding: 4rem;
+	padding: 2rem 4rem 10rem 4rem;
 	position: relative;
 	img{
-		max-width: 300px;
+		max-width: 200px;
 		display: inline-block;
 		margin-right: 4rem;
 		transform: rotate(-5deg);
+		position: relative;
+		&:hover{
+			animation: bounce 1s infinite;
+		}
 	}
 
 	h2{
-		width: 50%;
+		width: auto;
 		font-weight: 400;
 		font-size: 2rem;
-		padding-right: 4rem;
 		margin: 0;
-		position: absolute;
-		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
+		display: inline-block;
 	}
 }
 
@@ -35,6 +35,7 @@ header{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	animation: fadeIn 2s forwards;
 }
 
 .no-wrap{
@@ -64,6 +65,7 @@ header{
 .main-info-container{
 	position: relative;
 	align-items: flex-start;
+	animation: fadeIn 2s forwards;
 }
 
 .hero-image{

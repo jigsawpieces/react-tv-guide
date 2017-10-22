@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+import moment from "moment"
 
 export default class Header extends React.Component {
 
@@ -6,7 +7,8 @@ export default class Header extends React.Component {
     return (
       <header>
         <img src="../assets/tv.svg" />
-        <h2>What telly should I watch tonight?</h2>
+        <p clasName="date"></p>
+        <h2>What's on telly <b>tonight</b>?</h2>
       </header>
     );
   }

@@ -8,6 +8,29 @@ $tablet-width: 1024px;
 
 $mobile-width: 767px;
 
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes bounce {
+  0%   {
+  	top: 0;
+  	left: 0;
+  	transform: rotate(-5deg) scale(1);
+  }
+  50%	 {
+  	top: 10px;
+  	left: 10px;
+  	transform: rotate(2deg) scale(1.1);
+  }
+  100% {
+  	top:0;
+  	left: 0;
+  	transform: rotate(-5deg) scale(1);
+  }
+}
+
 @mixin column-span($column-span) {
 
 	@if $column-span == 1 {
