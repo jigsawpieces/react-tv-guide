@@ -1,0 +1,25 @@
+.show-info{
+
+	.row{
+		.col-2:nth-of-type(odd){
+			color: #aaa;
+		}
+	}
+
+	.schedule,
+	.genres{
+		span{
+			margin-right: 5px;
+
+			&:after{
+				content: ',';
+			}
+
+			&:last-of-type{
+				&:after{
+					display: none;
+				}
+			}
+		}
+	}
+}

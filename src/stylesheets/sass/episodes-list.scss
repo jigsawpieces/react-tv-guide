@@ -1,0 +1,78 @@
+.episodes{
+	background-color: #f2f2f2;
+	padding: 4rem;
+
+	h3 {
+		font-size: 1.8rem;
+		margin-bottom: 2rem;
+		font-weight: 400;
+	}
+
+	.row{
+		border-top: 2px solid #fff;
+
+		&:first-of-type{
+			text-transform: uppercase;
+			color: #aaa;
+		}
+
+		.season, .number, .release-date{
+			width: 20%;
+		}
+
+		.name{
+			width: 40%;
+		}
+	}
+}
+
+@media (max-width: $tablet-width){
+
+	.episodes{
+		padding: 2rem;
+		h3{
+			font-size: 1.2rem;
+		}
+	}
+}
+
+@media (max-width: $mobile-width){
+	.episodes{
+		padding: 1rem;
+		
+		.row{
+			flex-wrap: wrap;
+
+			&:first-of-type{
+				display: none;
+			}
+
+			.number,
+			.season,
+			.release-date,
+			.name{
+				width: 50%;
+			}
+
+			.number{
+				order: 3;
+			}
+			.name{
+				order: 4;
+			}
+
+			.season{
+				&:before{
+					content: 'S: ';
+				}
+			}
+
+			.number{
+				&:before{
+					content: 'E: ';
+				}
+			}
+		}
+	}
+}
+

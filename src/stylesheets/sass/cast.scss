@@ -1,0 +1,11 @@
+.cast{
+
+	.actor,
+	.character{
+		@include column-span(2);
+	}
+
+	.character{
+		color: #aaa;
+	}
+}

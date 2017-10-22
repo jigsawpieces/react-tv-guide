@@ -1,0 +1,142 @@
+header{
+	background-color: #f2f2f2;
+	padding: 4rem;
+	position: relative;
+	img{
+		max-width: 300px;
+		display: inline-block;
+		margin-right: 4rem;
+		transform: rotate(-5deg);
+	}
+
+	h2{
+		width: 50%;
+		font-weight: 400;
+		font-size: 2rem;
+		padding-right: 4rem;
+		margin: 0;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+
+// grids
+.row{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding: 1rem 0;
+}
+
+.grid-container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.no-wrap{
+	flex-wrap: nowrap;
+}
+
+
+// main
+.navigator{
+	width: 100%;
+	margin: 2rem 0;
+	padding-left: 4rem;
+
+	a{
+		color: #333;
+		text-decoration: none;
+		background-color: $colour-yellow;
+		padding: 5px 10px;
+		&:hover{
+			text-decoration: none;
+			background-color: darken($colour-yellow,5%)
+		}
+	}
+}
+
+// main episode info
+.main-info-container{
+	position: relative;
+	align-items: flex-start;
+}
+
+.hero-image{
+	width: 30%;
+	margin-left: 4rem;
+	text-align: center;
+	img{
+		max-width: 100%;
+	}
+}
+
+.main-info{
+	padding: 4rem;
+	width: calc(100% - 40% - 8rem);
+	background-color: #f0f0f0;
+	position: relative;
+	right: 4rem;
+	bottom: -2rem;
+
+	h2{
+		margin-top: 4rem;
+		font-size: 1.8rem;
+		font-weight: 400;
+	}
+}
+
+
+@media (max-width: $tablet-width){
+	.hero-image{
+		margin-left: 2rem;
+	}
+
+	.main-info{
+		right: 0;
+		padding: 2rem;
+		width: calc(100% - 40% - 4rem);
+	}
+}
+
+@media (max-width: $mobile-width){
+
+	.main-info-container{
+		padding: 1rem;
+	}
+
+	.main-info{
+		width: 100%;
+		right: auto;
+		bottom: auto;
+
+		h2{
+			margin-top: 1rem;
+			font-size: 1.4rem;
+		}
+	}
+
+	.hero-image{
+		margin: 0 0 1rem 0;
+		width: 100%;
+		text-align: center;
+		img{
+			max-height: 300px;
+			width: auto;
+		}
+	}
+
+	.no-wrap{
+		flex-wrap: wrap;
+	}
+
+	.navigator{
+		margin: 0 0 1rem 0;
+		padding: 0;
+		text-align: center;
+	}
+}

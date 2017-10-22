@@ -1,0 +1,35 @@
+$body-font: 'Fira Mono', monospace;
+
+$gutter-width: 20px;
+
+$colour-yellow: #fff600;
+
+$tablet-width: 1024px;
+
+$mobile-width: 767px;
+
+@mixin column-span($column-span) {
+
+	@if $column-span == 1 {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	@else {
+		$column-width: percentage(1/$column-span);		
+		$column-gutters: ($column-span - 1) / $column-span;
+		$column-gutter-width: $gutter-width * $column-gutters;
+		
+		width: calc( #{$column-width} - #{$column-gutter-width} );
+
+		margin-right: $gutter-width;
+		align-content: flex-start;
+		display: flex;
+		flex-wrap: wrap;
+
+		&:nth-of-type(#{$column-span}n),
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
