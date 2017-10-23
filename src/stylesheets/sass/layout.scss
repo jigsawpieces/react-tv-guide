@@ -45,9 +45,7 @@ header{
 @media (max-width: $tablet-width){
 
 	header{
-		h2{
-			width: 30%;
-		}
+		padding-bottom: 6rem;
 	}
 }
 
@@ -66,7 +64,7 @@ header{
 
 
 	header{
-		padding: 1rem;
+		padding: 1rem 1rem 4rem 1rem;
 		text-align: center;
 		img{
 			margin: 0;

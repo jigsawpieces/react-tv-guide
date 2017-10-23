@@ -91,6 +91,12 @@
 
 @media (max-width: $tablet-width){
 
+	.navigator{
+		left: 1rem;
+		top: 1rem;
+		margin: 0;
+	}
+
 	.show-info,
 	.cast{
 		padding: 2rem;
@@ -109,18 +115,31 @@
 		padding: 2rem;
 		width: calc(100% - 40% - 4rem);
 	}
+
+	.main-info-container{
+		padding-top: 4rem;
+		&>.row{
+			padding: 1rem;
+		}
+	}
+
 }
 
 @media (max-width: $mobile-width){
 
 	.main-info-container{
-		padding: 1rem;
+		padding: 4rem 1rem 1rem;
+		&>.row{
+			flex-direction: column;
+			padding: 0;
+		}
 	}
 
 	.main-info{
 		width: 100%;
 		right: auto;
 		bottom: auto;
+		left: auto;
 
 		h2{
 			margin-top: 1rem;

@@ -7,3 +7,14 @@ html, #app{
 	font-weight: 400;
 	animation: fadeIn 2s forwards;
 }
+
+*{
+	box-sizing: border-box;
+}
+
+@media (max-width: $tablet-width){
+	html,
+	#app{
+		animation: none;
+	}
+}
