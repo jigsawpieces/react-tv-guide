@@ -1,0 +1,152 @@
+// main
+.navigator{
+	top: 2rem;
+	left: 4rem;
+	position: fixed;
+	z-index:1;
+	a{
+		color: #333;
+		text-decoration: none;
+		background-color: $colour-yellow;
+		padding: 5px 10px;
+		font-family: $heading-font;
+		&:hover{
+			text-decoration: none;
+			background-color: darken($colour-yellow,5%)
+		}
+	}
+}
+
+// main episode info
+.main-info-container{
+	position: relative;
+	align-items: flex-start;
+	animation: fadeIn 2s forwards;
+	&>.row{
+		padding: 6rem 4rem 4rem;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.hero-image{
+	width: 30%;
+	text-align: right;
+	img{
+		max-width: 100%;
+	}
+}
+
+.main-info{
+	padding: 4rem;
+	width: 60%;
+	//width: calc(100% - 40% - 8rem);
+	background-color: #f0f0f0;
+	position: relative;
+	left: -1rem;
+	h2{
+		margin-top: 2rem;
+		font-size: 1.8rem;
+		font-weight: 400;
+		font-family: $heading-font;
+		&:after{
+			content: '';
+			width: 40px;
+			height: 5px;
+			background-color: #333;
+			display: block;
+			margin-top: .5rem;
+		}
+	}
+
+	b{
+		font-weight: 400;
+	}
+}
+
+
+// show info and cast
+.show-info,
+.cast{
+	width: 50%;
+	padding: 0 4rem 2rem 4rem;
+	margin: 0 0 4rem 0;
+
+	.row{
+		border-top: 2px solid #eee;
+	}
+
+	h3{
+		font-size: 1.8rem;
+		margin-bottom: 2rem;
+		font-weight: 400;
+		font-family: $heading-font;
+	}
+}
+
+.col-2{
+	@include column-span(2);
+}
+
+
+@media (max-width: $tablet-width){
+
+	.show-info,
+	.cast{
+		padding: 2rem;
+		h3{
+			font-size: 1.2rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	.hero-image{
+		margin-left: 2rem;
+	}
+
+	.main-info{
+		right: 0;
+		padding: 2rem;
+		width: calc(100% - 40% - 4rem);
+	}
+}
+
+@media (max-width: $mobile-width){
+
+	.main-info-container{
+		padding: 1rem;
+	}
+
+	.main-info{
+		width: 100%;
+		right: auto;
+		bottom: auto;
+
+		h2{
+			margin-top: 1rem;
+			font-size: 1.4rem;
+		}
+	}
+
+	.hero-image{
+		margin: 0 0 1rem 0;
+		width: 100%;
+		text-align: center;
+		img{
+			max-height: 300px;
+			width: auto;
+		}
+	}
+
+	.show-info,
+	.cast{
+		width: 100%;
+		padding: 1rem;
+		margin: 0;
+	}
+}
+
+@import 'show-grid';
+@import 'show-info';
+@import 'cast';
+@import 'episodes-list';

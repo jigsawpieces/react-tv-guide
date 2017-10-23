@@ -14,7 +14,7 @@ header{
 	}
 
 	h2{
-		width: auto;
+		width: calc(100% - 200px - 6rem);
 		font-weight: 400;
 		font-size: 2rem;
 		margin: 0;
@@ -42,108 +42,17 @@ header{
 	flex-wrap: nowrap;
 }
 
-
-// main
-.navigator{
-	top: 2rem;
-	left: 4rem;
-	position: fixed;
-	z-index:1;
-	a{
-		color: #333;
-		text-decoration: none;
-		background-color: $colour-yellow;
-		padding: 5px 10px;
-		font-family: $heading-font;
-		&:hover{
-			text-decoration: none;
-			background-color: darken($colour-yellow,5%)
-		}
-	}
-}
-
-// main episode info
-.main-info-container{
-	position: relative;
-	align-items: flex-start;
-	animation: fadeIn 2s forwards;
-	&>.row{
-		padding: 6rem 4rem 4rem;
-		align-items: center;
-		justify-content: center;
-	}
-}
-
-.hero-image{
-	width: 30%;
-	text-align: right;
-	img{
-		max-width: 100%;
-	}
-}
-
-.main-info{
-	padding: 4rem;
-	width: 60%;
-	//width: calc(100% - 40% - 8rem);
-	background-color: #f0f0f0;
-	position: relative;
-	left: -1rem;
-	h2{
-		margin-top: 2rem;
-		font-size: 1.8rem;
-		font-weight: 400;
-		font-family: $heading-font;
-		&:after{
-			content: '';
-			width: 40px;
-			height: 5px;
-			background-color: #333;
-			display: block;
-			margin-top: .5rem;
-		}
-	}
-}
-
-
 @media (max-width: $tablet-width){
-	.hero-image{
-		margin-left: 2rem;
-	}
 
-	.main-info{
-		right: 0;
-		padding: 2rem;
-		width: calc(100% - 40% - 4rem);
+	header{
+		h2{
+			width: 30%;
+		}
 	}
 }
+
 
 @media (max-width: $mobile-width){
-
-	.main-info-container{
-		padding: 1rem;
-	}
-
-	.main-info{
-		width: 100%;
-		right: auto;
-		bottom: auto;
-
-		h2{
-			margin-top: 1rem;
-			font-size: 1.4rem;
-		}
-	}
-
-	.hero-image{
-		margin: 0 0 1rem 0;
-		width: 100%;
-		text-align: center;
-		img{
-			max-height: 300px;
-			width: auto;
-		}
-	}
 
 	.no-wrap{
 		flex-wrap: wrap;
@@ -153,5 +62,25 @@ header{
 		margin: 0 0 1rem 0;
 		padding: 0;
 		text-align: center;
+	}
+
+
+	header{
+		padding: 1rem;
+		text-align: center;
+		img{
+			margin: 0;
+			max-width: 100px;
+		}
+		h2{
+			width: 100%;
+			padding: 0;
+			text-align: center;
+			position: relative;
+			top: auto;
+			transform: none;
+			font-size: 1.4rem;
+			margin-top: 1rem;
+		}
 	}
 }

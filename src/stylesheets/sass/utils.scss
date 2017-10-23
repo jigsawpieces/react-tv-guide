@@ -1,14 +1,28 @@
+// typography
+
 $body-font: 'Fira Sans', monospace;
 
 $heading-font: 'Fira Mono', Arial, sans-serif;
 
+
+// gutters
+
 $gutter-width: 20px;
 
+
+// colours
+
 $colour-yellow: #fff600;
+
+
+// breakpoints
 
 $tablet-width: 1024px;
 
 $mobile-width: 767px;
+
+
+// animations 
 
 @keyframes fadeIn {
   0%   { opacity: 0; }
@@ -32,6 +46,9 @@ $mobile-width: 767px;
   	transform: rotate(-5deg) scale(1);
   }
 }
+
+
+// functions
 
 @mixin column-span($column-span) {
 
