@@ -36,6 +36,9 @@ header{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	max-width: $max-screen-width;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .no-wrap{
