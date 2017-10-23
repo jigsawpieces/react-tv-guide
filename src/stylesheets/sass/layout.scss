@@ -1,7 +1,12 @@
 header{
 	background-color: #f0f0f0;
-	padding: 2rem 4rem 10rem 4rem;
+	padding: 4rem 4rem 10rem 4rem;
 	position: relative;
+
+	.grid-container{
+		padding: 0 4rem;
+	}
+
 	img{
 		max-width: 200px;
 		display: inline-block;
@@ -13,11 +18,19 @@ header{
 		}
 	}
 
+	.strapline{
+		width: calc(100% - 200px - 8rem);
+		margin-top: 1rem;
+		p{
+			margin: 0;
+			font-size: 1.4rem;
+		}
+	}
+
 	h2{
-		width: calc(100% - 200px - 6rem);
+		margin: 2rem 0 0;
 		font-weight: 400;
 		font-size: 2rem;
-		margin: 0;
 		display: inline-block;
 		font-family: $heading-font;
 	}
@@ -49,6 +62,14 @@ header{
 
 	header{
 		padding-bottom: 6rem;
+
+		.grid-container{
+			padding: 0;
+		}
+
+		.strapline{
+			width: calc(100% - 200px - 2rem);
+		}
 	}
 }
 
@@ -69,6 +90,14 @@ header{
 	header{
 		padding: 1rem 1rem 4rem 1rem;
 		text-align: center;
+
+		.grid-container{
+			justify-content: center;
+		}
+
+		.strapline{
+			width: 100%;
+		}
 		img{
 			margin: 0;
 			max-width: 100px;

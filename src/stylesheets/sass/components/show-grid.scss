@@ -11,7 +11,7 @@
 .grid{
 	@include column-span(6);
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 
 	transition: all 300ms ease-in-out;
 	margin-bottom: 2rem;

@@ -12,6 +12,10 @@ html, #app{
 	box-sizing: border-box;
 }
 
+b, strong{
+	font-weight: 700;
+}
+
 @media (max-width: $tablet-width){
 	html,
 	#app{

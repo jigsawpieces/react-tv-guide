@@ -22,7 +22,8 @@ export default class Show extends React.Component {
     
     let showInfo = this.state.shows;
 
-    if(!showInfo) return <p>Uh oh, something's gone wrong...</p>
+    if(!showInfo) return <p>Loading...</p>
+
     return(
 
       <div>

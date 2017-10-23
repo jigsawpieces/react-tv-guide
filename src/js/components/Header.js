@@ -1,14 +1,21 @@
 import React from "react"
-import moment from "moment"
 
 export default class Header extends React.Component {
 
   render() {
+
+    var date = new Date();    
+
     return (
       <header>
       	<div className="grid-container">
+          
 	        <img src="../assets/tv.svg" />
-	        <h2>What's on telly <b>tonight</b>?</h2>
+
+          <div className="strapline">
+            <p>It's { date.toDateString() }!</p>
+  	        <h2>What's on telly <b>tonight</b>?</h2>
+          </div>
         </div>
       </header>
     );
