@@ -1,6 +1,6 @@
 import React from "react"
 
-import ShowCast from "./ShowCast"
+import CastList from "./CastList"
 import EpisodeList from "./EpisodeList"
   
 export default class Show extends React.Component {
@@ -82,7 +82,7 @@ export default class Show extends React.Component {
 
             </div>
           
-            <ShowCast passId={this.props.match.params.showId} />
+            <CastList passId={this.props.match.params.showId} />
           
           </div>
 

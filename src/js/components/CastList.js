@@ -1,6 +1,6 @@
 import React from "react"
 
-export default class ShowCast extends React.Component {
+export default class CastList extends React.Component {
   
   constructor() {
     super()

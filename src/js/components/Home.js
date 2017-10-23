@@ -29,7 +29,7 @@ class Shows extends React.Component {
           {this.state.items.length ?
             this.state.items.map(item=>
               <div onClick={()=>this.navigate(item.show.id)} className="grid" key={item.id}>
-                <img src={item.show.image.medium} />
+                <img src={item.show.image !== null && item.show.image.medium} />
                 <h2>{item.show.name}</h2>
                 {item.show.rating.average > 0 &&
                   <p><span className="rating">Rating</span><span className="score">{item.show.rating.average} / 10</span></p>
