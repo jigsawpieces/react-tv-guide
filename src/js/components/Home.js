@@ -2,6 +2,9 @@ import React from "react"
 import { withRouter } from 'react-router-dom'
 import Header from "./Header"
 
+require('es6-promise').polyfill()
+require('isomorphic-fetch')
+
 class Shows extends React.Component {
     
   constructor() {
